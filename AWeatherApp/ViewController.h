@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController <CLLocationManagerDelegate>
+/* IBOutlets */
+@property (strong, nonatomic) IBOutlet UILabel *ibCityNameLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *ibFullScreenImageView;
+@property (strong, nonatomic) IBOutlet UILabel *ibWeatherDescriptionLabel;
+@property (strong, nonatomic) IBOutlet UIView *ibBlurView;
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *ibAdditionalInfo;
 
 @end
 
